@@ -1,8 +1,8 @@
-# [Blog](https://iboughtbed-nf-hw-spotify-clone.vercel.app/)
+# [Spotify](https://iboughtbed-nf-hw-spotify-clone.vercel.app/)
 
-This is an open source todo app build with everything new in Next.js 14. It is bootstrapped with `create-t3-app`.
+This is an open source spotify clone build with everything new in Next.js 14. It is bootstrapped with `create-t3-app`.
 
-[![Blog](./public/og.png)](https://iboughtbed-nf-hw-spotify-clone.vercel.app/)
+[![Spotify](./public/og.png)](https://iboughtbed-nf-hw-spotify-clone.vercel.app/)
 
 ## Tech Stack
 
@@ -15,6 +15,7 @@ This is an open source todo app build with everything new in Next.js 14. It is b
 - [x] I'm just messing with you
 - [x] But I loved her tho
 - [x] And we ended it on good terms
+- [x] But I miss her tho
 
 ## Running Locally
 
@@ -44,7 +45,7 @@ This is an open source todo app build with everything new in Next.js 14. It is b
 
 ## Introduction
 
-This is nFactorial Incubator homework for day 2
+This is nFactorial Incubator homework
 
 ## License
 
