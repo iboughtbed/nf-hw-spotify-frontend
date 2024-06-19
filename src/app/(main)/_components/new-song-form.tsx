@@ -1,11 +1,13 @@
 "use client";
 
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useRouter } from "next/navigation";
+import * as React from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "sonner";
 import { z } from "zod";
-import { Button } from "~/components/ui/button";
 
+import { Button } from "~/components/ui/button";
 import {
   Form,
   FormControl,
@@ -25,14 +27,22 @@ const formSchema = z.object({
 });
 
 export function NewSongForm() {
+  const router = useRouter();
+  const [isPending, setIsPending] = React.useState(false);
+
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
   });
 
   async function onSubmit(data: z.infer<typeof formSchema>) {
+    setIsPending(true);
+
     try {
       await createSong(data);
+      setIsPending(false);
+      router.push("/");
     } catch (error) {
+      setIsPending(false);
       toast.error("Something went wrong");
       console.log(error);
     }
@@ -109,7 +119,9 @@ export function NewSongForm() {
           )}
         />
 
-        <Button type="submit">Submit</Button>
+        <Button type="submit" disabled={isPending}>
+          Submit
+        </Button>
       </form>
     </Form>
   );

@@ -1,6 +1,8 @@
 import Link from "next/link";
 
 import { Icons } from "~/components/icons";
+import { buttonVariants } from "~/components/ui/button";
+import { cn } from "~/lib/utils";
 
 export function SiteHeader() {
   return (
@@ -12,6 +14,15 @@ export function SiteHeader() {
         >
           <Icons.logo />
         </Link>
+
+        <div className="flex w-full items-center justify-end">
+          <Link
+            href="/new/song"
+            className={cn(buttonVariants({ variant: "outline" }))}
+          >
+            New Song
+          </Link>
+        </div>
       </div>
     </header>
   );
