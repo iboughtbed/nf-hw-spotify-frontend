@@ -6,10 +6,10 @@ const links = {
 };
 
 export const siteConfig = {
-  name: "To-do",
-  url: "https://iboughtbed-nf-hw-2.vercel.app/",
-  ogImage: "https://iboughtbed-nf-hw-2.vercel.app/og.png",
-  description: "A todo app",
+  name: "Spotify",
+  url: "https://iboughtbed-nf-hw-spotify.vercel.app/",
+  ogImage: "https://iboughtbed-nf-hw-spotify.vercel.app/og.png",
+  description: "A spotify clone",
   links,
   mainNav: [] satisfies MainNavItem[],
   footerNav: [

@@ -3,6 +3,7 @@ import "~/styles/globals.css";
 import type { Metadata, Viewport } from "next";
 
 import { ThemeProvider } from "~/components/providers";
+import { Toaster as Sonner } from "~/components/ui/sonner";
 import { siteConfig } from "~/config/site";
 import { fontMono, fontSans } from "~/lib/fonts";
 import { cn } from "~/lib/utils";
@@ -14,7 +15,7 @@ export const metadata: Metadata = {
   },
   metadataBase: new URL(siteConfig.url),
   description: siteConfig.description,
-  keywords: ["Todo", "nFactorial"],
+  keywords: ["Spotify", "nFactorial"],
   authors: [
     {
       name: "iboughtbed",
@@ -77,8 +78,8 @@ export default function RootLayout({ children }: RootLayoutProps) {
           enableSystem
           disableTransitionOnChange
         >
-          {/* rollback */}
           <div vaul-drawer-wrapper="">{children}</div>
+          <Sonner />
         </ThemeProvider>
       </body>
     </html>

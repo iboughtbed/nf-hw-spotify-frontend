@@ -31,8 +31,10 @@ export type MainNavItem = NavItemWithOptionalChildren;
 
 export type SidebarNavItem = NavItemWithChildren;
 
-export type Task = {
-  id: number;
-  text: string;
-  completed: boolean;
+export type Song = {
+  _id: string;
+  name: string;
+  artist: string;
+  audio: string;
+  image: string;
 };
